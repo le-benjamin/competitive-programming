@@ -1,10 +1,8 @@
 # Competitive Programming
 
 ### General Info
-Solution files from Competitive Programming competitions/training problems. Not all competition problems are present.  
-Problems that are unfinished will have a `u_` at the beginning of the file name.  
-Problems that have been finished but have not been checked will have an `f_` at the beginning of the file name.  
-Problems that have been finished and checked will not have an additional character.
+Solution files from Competitive Programming competitions/training problems. Not all competition problems are present. 
+Files starting with `u_` have not been completed, `f_` indicates a solution is complete but has not been checked against test cases. 
 All solutions are written by me, solutions from teammates have been moved.  
 
 ### README.md files
