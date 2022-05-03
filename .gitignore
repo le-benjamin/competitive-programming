@@ -1,0 +1,28 @@
+# unfinished solutions
+u_*.*
+
+# vim files
+*.*~
+*.swp
+
+# test files
+test.*
+
+# problem writing files
+writing/
+
+# executable/output/input files
+*.class
+*.exe
+*.out
+*.in
+in.dat 
+# contests using .dat as input generally aren't available online
+
+# vs code workspaces
+*.code-workspace
+
+# intellij folders
+.idea/
+out/
+*.iml

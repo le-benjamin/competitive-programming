@@ -1,0 +1,13 @@
+3
+A or B and C 
+A B 
+B C 
+C false
+end
+not not not Z
+Z false
+end
+Z
+X false
+Y false
+end
