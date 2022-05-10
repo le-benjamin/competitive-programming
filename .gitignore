@@ -16,8 +16,6 @@ writing/
 *.exe
 *.out
 *.in
-in.dat 
-# contests using .dat as input generally aren't available online
 
 # vs code
 *.code-workspace
