@@ -13,6 +13,6 @@ Basic README Format:
 ```
 **Original Date:** *Mmm DD, YYYY*  
 **Link:** *https://www.example.com*  
-**Team Members:** *Ben Le, Ben Lee, Ben Leee*  
+**Team Members:** *Ben Le, Ben A, Ben B*  
 **Div/Place:** *Novice #*
 ```
