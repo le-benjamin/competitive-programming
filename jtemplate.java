@@ -3,6 +3,9 @@ import java.util.*;
 
 public class jtemplate {
     public static void main(String[] args) throws IOException {
-        Scanner in = new Scanner(new File("_"));
+        // keep template simple for use at UIL
+        Scanner in = new Scanner(new File("jtemplate.dat"));
+        
+        in.close();
     }
 }

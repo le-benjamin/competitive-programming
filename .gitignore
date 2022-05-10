@@ -19,8 +19,9 @@ writing/
 in.dat 
 # contests using .dat as input generally aren't available online
 
-# vs code workspaces
+# vs code
 *.code-workspace
+.vscode/
 
 # intellij folders
 .idea/

@@ -1,4 +1,4 @@
-package kattis.fizzbuzz2;
+package Kattis;
 
 import java.util.Scanner;
 

@@ -1,4 +1,4 @@
-package kattis.zoo;
+package Kattis;
 
 import java.util.Scanner;
 import java.util.HashMap;

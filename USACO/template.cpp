@@ -1,3 +1,9 @@
+/*
+ID: b.le611
+PROG: __
+LANG: C++14
+*/
+
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -74,7 +80,7 @@ void solve() {
 }
 
 int main() {
-    setIO("");
+    setIO("__");
 
 
     return 0;

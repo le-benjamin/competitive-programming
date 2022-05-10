@@ -1,3 +1,9 @@
+/*
+ID: b.le611
+PROG: skidesign
+LANG: C++14
+*/
+
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -23,17 +29,6 @@ using ld = long double;
 #define F_ORC(...) GET5(__VA_ARGS__, F_OR4, F_OR3, F_OR2, F_OR1)
 #define FOR(...) F_ORC(__VA_ARGS__)(__VA_ARGS__)
 #define EACH(x, a) for (auto& x: a)
-
-const int MOD = 1e9+7;
-const ll INF = 1e18;
-
-void setIO(string name = "", int prec = 2) { // lim prec = 15
-    cin.tie(nullptr)->sync_with_stdio(0);
-    cout << fixed << setprecision(prec);
-    if (sz(name)) {
-        freopen((name+".in").c_str(), "r", stdin);
-        freopen((name+".out").c_str(), "w", stdout); }
-}
 
 string to_string(char c) { return string(1, c); }
 string to_string(bool b) { return b?"true":"false"; }
@@ -66,16 +61,59 @@ template<class H, class... T> void print(const H& h, const T&... t) {
 	print(t...);
 }
 
+void setIO(string name = "", int prec = 15) {
+    cin.tie(nullptr)->sync_with_stdio(0);
+    cout << fixed << setprecision(prec);
+    if (sz(name)) {
+        freopen((name+".in").c_str(), "r", stdin);
+        freopen((name+".out").c_str(), "w", stdout); }
+}
+
+const int MOD = 1e9+7;
+const ll  INF = 1e18;
+
+
 // task variables, funcs, definitions
+#define MAX_H 17
 
+int n;
+vt<ll> heights;
 
-void solve() {
+ll solve() {
+    ll ans = INF; 
 
+    ll h = heights.back()-heights.front()-MAX_H;
+    if (h <= 0) return 0;
+    ll dl1 = h/2+heights.front(), dr1 = heights.back()-ceil(h/2.0);
+    ll sum = INF, dl2, dr2;
+    int i; // declare outside of for so that init statement does everything
+    for (i = 1, dl2 = dl1, dr2 = dr1; sum <= ans && dr2 <= heights.back(); i++, dl2++, dr2++) { // right
+        ans = min(ans, sum); // min() is not strictly necessary, just for clarity
+        sum = 0;
+        for (auto it = heights.begin(); it < upper_bound(all(heights), dl2); it++) sum += (dl2-(*it))*(dl2-(*it));
+        for (auto it = upper_bound(all(heights), dr2); it < heights.end(); it++)   sum += (*it-dr2)  *  (*it-dr2);
+    }
+    for (i = 1, dl2 = dl1, dr2 = dr1; sum <= ans && dl2 >= 0; i++, dl2--, dr2--) { // left
+        ans = min(ans, sum);
+        print(sum);
+        sum = 0;
+        for (auto it = heights.begin(); it < upper_bound(all(heights), dl2); it++) sum += (dl2-(*it))*(dl2-(*it));
+        for (auto it = upper_bound(all(heights), dr2); it < heights.end(); it++)   sum += (*it-dr2)  *  (*it-dr2);
+    }
+
+    return ans;
 }
 
 int main() {
-    setIO("");
+    setIO("skidesign");
 
+    read(n);
+    heights.resize(n, 0);
+    read(heights);
+    sort(all(heights));
+
+    ll ans = solve();
+    print(ans);
 
     return 0;
 }
