@@ -1,6 +1,6 @@
 /*
 ID: b.le611
-PROG: __
+PROG: ___
 LANG: C++14
 */
 
@@ -17,6 +17,9 @@ using ld = long double;
 #define all(c) (c).begin(), (c).end()
 #define rall(c) (c).rbegin(), (c).rend()
 #define sz(x) (int)(x).size()
+
+#define f first
+#define s second
 
 #define CSTR(n) ((char*)(malloc(sizeof(char)*n)))
 
@@ -80,7 +83,7 @@ void solve() {
 }
 
 int main() {
-    setIO("__");
+    setIO("___");
 
 
     return 0;

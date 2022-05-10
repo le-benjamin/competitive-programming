@@ -12,6 +12,9 @@ using ld = long double;
 #define rall(c) (c).rbegin(), (c).rend()
 #define sz(x) (int)(x).size()
 
+#define f first
+#define s second
+
 #define CSTR(n) ((char*)(malloc(sizeof(char)*n)))
 
 #define F_OR(i, a, b, s) for (int i=(a); (s)>0?i<(b):i>(b); i+=(s))
@@ -30,9 +33,7 @@ const ll INF = 1e18;
 void setIO(string name = "", int prec = 2) { // lim prec = 15
     cin.tie(nullptr)->sync_with_stdio(0);
     cout << fixed << setprecision(prec);
-    if (sz(name)) {
-        freopen((name+".in").c_str(), "r", stdin);
-        freopen((name+".out").c_str(), "w", stdout); }
+    if (sz(name)) { freopen((name+".in").c_str(), "r", stdin), freopen((name+".out").c_str(), "w", stdout); }
 }
 
 string to_string(char c) { return string(1, c); }

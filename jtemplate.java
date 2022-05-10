@@ -6,6 +6,7 @@ public class jtemplate {
         // keep template simple for use at UIL
         Scanner in = new Scanner(new File("jtemplate.dat"));
         
+        
         in.close();
     }
 }
