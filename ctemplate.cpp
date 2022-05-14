@@ -44,10 +44,10 @@ template<class T> string to_string(T v) {
     bool f=1;
     string res;
     EACH(x, v) {
-		if(!f) res+=' ';
-		f=0;
-		res+=to_string(x);
-	}
+        if(!f) res+=' ';
+        f=0;
+        res+=to_string(x);
+    }
     return res;
 }
 
@@ -61,10 +61,10 @@ template<class A> void write(A x) { cout << to_string(x); }
 template<class H, class... T> void write(const H& h, const T&... t) { write(h); write(t...); }
 void print() { write("\n"); }
 template<class H, class... T> void print(const H& h, const T&... t) { 
-	write(h);
-	if(sizeof...(t))
-		write(' ');
-	print(t...);
+    write(h);
+    if(sizeof...(t))
+        write(' ');
+    print(t...);
 }
 
 // task variables, funcs, definitions
