@@ -35,5 +35,10 @@ public class jtemplate {
 		public int nextInt() { return Integer.parseInt(next()); }
 		public double nextDouble() { return Double.parseDouble(next()); }
 		public long nextLong() { return Long.parseLong(next()); }
+		public String nextLine() { 
+            if (st != null && st.hasMoreTokens()) 
+            { String out = ""; while (st.hasMoreTokens()) out += st.nextToken() + ' '; return out; }
+            try { return r.readLine(); } catch (Exception e) { return null; } 
+        }
 	}
 }
