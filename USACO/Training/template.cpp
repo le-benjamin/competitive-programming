@@ -36,6 +36,20 @@ using ld = long double;
 const int MOD = 1e9+7;
 const ll INF = 1e18;
 
+template<typename h0, typename h1, typename...Tl>
+constexpr auto max(h0 &&hf, h1 &&hs, Tl &&... tl) {
+    if constexpr (sizeof...(tl) == 0)
+        return hf > hs ? hf : hs;
+    else return max(max(hf, hs), tl...);
+}
+
+template<typename h0, typename h1, typename...Tl>
+constexpr auto min(h0 &&hf, h1 &&hs, Tl &&... tl) {
+    if constexpr (sizeof...(tl) == 0)
+        return hf < hs ? hf : hs;
+    else return min(min(hf, hs), tl...);
+}
+
 void setIO(string name = "", int prec = 2) { // lim prec = 15
     cin.tie(nullptr)->sync_with_stdio(0);
     cout << fixed << setprecision(prec); // use cout instead of print() or write()
