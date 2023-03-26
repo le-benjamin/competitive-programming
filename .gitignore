@@ -16,6 +16,7 @@ writing/
 *.exe
 *.out
 *.in
+*.dat
 
 # vs code
 *.code-workspace
